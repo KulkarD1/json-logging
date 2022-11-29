@@ -23,3 +23,7 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+bootRun {
+	environment = ["SPRING_PROFILES_ACTIVE": "dev" ]
+}
