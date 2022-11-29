@@ -70,7 +70,7 @@
 
     <springProfile name="local">
         <root level="info">
-            <appender-ref ref="JsonConsole" />
+            <appender-ref ref="Console" />
         </root>
     </springProfile>
 
