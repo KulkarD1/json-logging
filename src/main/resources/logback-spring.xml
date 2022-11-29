@@ -62,8 +62,16 @@
         </encoder>
     </appender>
 
-    <root level="info">
-        <appender-ref ref="JsonConsole" />
-    </root>
+    <springProfile name="!local">
+        <root level="warn">
+            <appender-ref ref="JsonConsole" />
+        </root>
+    </springProfile>
+
+    <springProfile name="local">
+        <root level="info">
+            <appender-ref ref="JsonConsole" />
+        </root>
+    </springProfile>
 
 </configuration>
